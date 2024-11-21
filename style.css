@@ -1,0 +1,659 @@
+/* Resetando alguns estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #9f8359;
+    color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Menu Toggle (para telas pequenas) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Seções da Página Home */
+section.home {
+    margin-top: 80px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo do Card de Endereços */
+.card-enderecos {
+    width: 90%;  /* Largura ajustada do card principal */
+    margin: 0 auto;  /* Centraliza o card na tela */
+    padding: 20px;
+    background-color: #f9f9f9;  /* Cor suave de fundo */
+    border-radius: 12px;  /* Bordas arredondadas */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);  /* Sombra para o card principal */
+    display: flex;  /* Usando flexbox para dispor as listas dentro do card */
+    flex-wrap: wrap;  /* Permite que os itens quebrem a linha quando necessário */
+    gap: 30px;  /* Espaço entre as listas de endereços */
+}
+
+/* Estilo para cada item de lista (sub-card de endereço) */
+.card-enderecos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;  /* Usando grid para organizar os sub-cards em duas colunas */
+    grid-template-columns: repeat(2, 1fr);  /* Cria duas colunas de tamanho igual */
+    gap: 20px;  /* Espaço entre os sub-cards (itens da lista) */
+    width: 100%;  /* Ocupa 100% da largura da ul */
+}
+
+/* Estilo para cada sub-card dentro da lista */
+.card-enderecos li {
+    display: flex;
+    flex-direction: column;  /* Alinha título e parágrafo na vertical */
+    background-color: #2C3E50;  /* Cor escura de fundo */
+    padding: 20px;  /* Padding confortável */
+    border-radius: 10px;  /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* Sombra suave */
+}
+
+/* Estilo do título (h3) dentro de cada sub-card */
+.card-enderecos h3 {
+    margin: 0;
+    font-size: 1.3em;  /* Título um pouco maior */
+    color: #fff;  /* Cor branca para o título */
+    font-weight: 600;  /* Um pouco mais grosso */
+    margin-bottom: 10px;  /* Espaço entre título e conteúdo */
+}
+
+/* Estilo do parágrafo (endereço) */
+.card-enderecos p {
+    margin: 5px 0;
+    color: #ecf0f1;  /* Cor suave para o endereço */
+    font-size: 1em;  /* Tamanho normal do texto */
+    line-height: 1.5;  /* Melhor espaçamento entre linhas */
+}
+
+/* Estilo do link dentro do sub-card (botão) */
+.card-enderecos .botao {
+    display: inline-block;
+    padding: 10px 20px;  /* Botão maior */
+    background-color: #3498db;  /* Cor de fundo azul */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    width: auto;
+    margin-top: 15px;  /* Espaço entre o endereço e o botão */
+}
+
+/* Efeito do botão ao passar o mouse */
+.card-enderecos .botao:hover {
+    background-color: #2980b9;  /* Cor escura do botão */
+}
+
+
+
+
+
+/* Estilos da Galeria de Fotos */
+.galeria {
+    margin-top: 50px;
+}
+
+.card-galeria {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card-fotos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.subcard {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subcard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos dos Programas da Igreja */
+/* Estilos dos Programas da Igreja */
+.programas {
+    margin-top: 50px;
+    padding: 40px 20px; /* Padding superior e lateral */
+    background-color: #f5f5f5; /* Cor suave de fundo para a seção */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza o conteúdo de forma vertical */
+    min-height: 100vh; /* Garante que o contêiner ocupe toda a altura da tela */
+}
+
+/* Título da seção */
+.programas h2 {
+    font-size: 2.5em;
+    color: #333333;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Estilo para os programas dentro da lista */
+.card-programas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas por padrão */
+    gap: 30px;
+    max-width: 1197px; /* Diminui a largura para 2 pixels a menos */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 100%; /* Garante que a ul ocupe a largura total possível */
+}
+
+/* Estilo para cada card individual */
+.card-programas li {
+    background-color: #555; /* Cor de fundo mais clara (cinza) */
+    padding: 25px; /* Aumenta o padding para 25px */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra mais sutil */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer; /* Aponta para a interação */
+    position: relative; /* Necessário para o efeito de hover */
+}
+
+/* Efeito ao passar o mouse */
+.card-programas li:hover {
+    transform: translateY(-6px); /* Eleva o card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    background-color: #333; /* Cor de fundo mais escura (ao passar o mouse) */
+}
+
+/* Efeito de sombra intensa */
+.card-programas li:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); /* Camada de sombra suave */
+    border-radius: 12px;
+}
+
+/* Estilo para as imagens */
+.card-programas img {
+    width: 67px; /* Diminui 2px na largura da imagem */
+    height: 67px; /* Diminui 2px na altura da imagem */
+    margin-bottom: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efeito de hover nas imagens */
+.card-programas li:hover img {
+    transform: scale(1.05); /* Aumenta a imagem de forma sutil */
+    opacity: 0.85; /* Leve transparência na imagem */
+}
+
+/* Título dentro de cada card */
+.card-programas h3 {
+    font-size: 1.6em;
+    color: #ffffff; /* Cor branca para o título */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Descrição */
+.card-programas p {
+    font-size: 1em;
+    color: #cccccc; /* Cor mais clara para o texto */
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .card-programas ul {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .programas h2 {
+        font-size: 2em;
+    }
+
+    .card-programas img {
+        width: 60px; /* Ajuste na imagem */
+        height: 60px;
+    }
+
+    .card-programas h3 {
+        font-size: 1.4em;
+    }
+}
+
+/* Estilo para o último programa que deve ocupar as 2 colunas */
+.card-programas li:last-child {
+    grid-column: span 2; /* Faz o último item ocupar duas colunas */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Estilo para garantir que o layout de 3 colunas aconteça com 6 ou mais programas */
+.card-programas ul:nth-child(n+6) {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas a partir do 6º item */
+}
+
+
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        background-color: #FF6600;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px 0;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav.show {
+        display: block;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+}
+
+
+/* Estilo para garantir que o rodapé fique na parte inferior da página */
+body, html {
+    height: 100%; /* Garantir que o HTML e o corpo ocupem toda a altura */
+    margin: 0; /* Remover margens padrões */
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto; /* Isso empurra o rodapé para o final da página */
+    background-color: #333; /* Cor de fundo para o rodapé */
+    color: #fff; /* Cor do texto no rodapé */
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Centralizar o texto */
+}
+
+footer .social a {
+    margin: 0 10px; /* Espaçamento entre os ícones sociais */
+    color: #fff; /* Cor dos links */
+    text-decoration: none; /* Remover sublinhado */
+}
+footer .social a:hover {
+    text-decoration: underline; /* Efeito de sublinhado ao passar o mouse */
+}
+
+
+
+
+/* pagina de contato */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 50px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.contato {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.info-contato ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-contato li {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.info-contato li strong {
+    font-weight: bold;
+}
+
+.social {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #3498db;
+    margin: 0 15px;
+}
+
+.social a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer .social a {
+    margin: 0 10px;
+    color: white;
+}
+
+footer .social a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilos gerais da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    color: #333; /* Cor do texto */
+    display: flex; /* Utiliza o flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organiza os itens na coluna */
+    height: 100%; /* Garante que a altura ocupe toda a tela */
+}
+
+/* Estilo para os títulos principais (h2) */
+h2 {
+    text-align: center; /* Alinha o texto no centro */
+    font-size: 2.5rem; /* Define o tamanho da fonte */
+    margin-top: 50px; /* Espaço superior */
+    color: #2c3e50; /* Cor do texto */
+    margin-bottom: 20px; /* Espaço inferior */
+}
+
+/* Estilos gerais da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    color: #333; /* Cor do texto */
+    display: flex; /* Utiliza o flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organiza os itens na coluna */
+    height: 100%; /* Garante que a altura ocupe toda a tela */
+}
+
+/* Estilo para os títulos principais (h2) */
+h2 {
+    text-align: center; /* Alinha o texto no centro */
+    font-size: 2.5rem; /* Define o tamanho da fonte */
+    margin-top: 50px; /* Espaço superior */
+    color: #2c3e50; /* Cor do texto */
+    margin-bottom: 20px; /* Espaço inferior */
+}
+
+/* Estilo da seção "História e Missão" */
+.historia {
+    background-color: #fff; /* Cor de fundo branca */
+    padding: 40px; /* Espaçamento interno */
+    margin: 20px auto; /* Margem automática para centralizar */
+    width: 90%; /* Largura de 90% da tela */
+    max-width: 800px; /* Largura máxima de 800px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px; /* Bordas arredondadas */
+    flex: 1; /* Ocupa o espaço restante disponível */
+}
+
+/* Estilo para o vídeo da história */
+.video {
+    text-align: center; /* Alinha o vídeo no centro */
+    margin-top: 30px; /* Espaço superior */
+}
+
+/* Estilos para o próprio vídeo */
+.video video {
+    border-radius: 10px; /* Bordas arredondadas no vídeo */
+    width: 100%; /* Largura 100% para se ajustar à tela */
+    height: auto; /* Mantém a proporção do vídeo */
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333; /* Cor de fundo escura */
+    color: white; /* Cor do texto branca */
+    text-align: center; /* Alinha o texto no centro */
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 50px; /* Espaço superior */
+    position: relative; /* Posiciona o rodapé de forma relativa */
+    bottom: 0; /* Garante que o rodapé fique na parte inferior */
+}
+
+/* Estilos para os links das redes sociais no rodapé */
+footer .social a {
+    margin: 0 10px; /* Espaçamento entre os links */
+    color: white; /* Cor do texto branca */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Efeito ao passar o mouse sobre os links */
+footer .social a:hover {
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+/* Estilos para a barra de navegação */
+nav ul {
+    display: flex; /* Utiliza o flexbox para os itens de navegação */
+    list-style: none; /* Remove os pontos de lista */
+    justify-content: center; /* Alinha os itens no centro */
+    padding: 0; /* Remove o padding */
+    margin: 0; /* Remove a margem */
+}
+
+/* Estilo para os itens da lista de navegação */
+nav ul li {
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+/* Estilo para os links na barra de navegação */
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1.2rem; /* Define o tamanho da fonte */
+    color: #333; /* Cor do texto */
+}
+
+/* Efeito ao passar o mouse sobre os links da barra de navegação */
+nav ul li a:hover {
+    color: #3498db; /* Muda a cor para azul ao passar o mouse */
+}
+
+
+
+/*  página DE CONTRUIBUIÇÃO */
+  /* Estilos para o rodapé */
+footer {
+    background-color: #444; /* Cor de fundo escura para dar destaque */
+    color: white; /* Cor do texto branca */
+    text-align: center; /* Alinha o texto no centro */
+    padding: 40px 0; /* Mais espaçamento interno */
+    margin-top: 50px; /* Espaço superior */
+}
+
+/* Estilo para o conteúdo do rodapé */
+footer .footer-content {
+    width: 80%; /* Tamanho do conteúdo dentro do rodapé */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* Estilo para os links das redes sociais no rodapé */
+footer .social a {
+    margin: 0 15px; /* Espaçamento entre os links */
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1.2rem; /* Tamanho do texto */
+}
+
+/* Efeito ao passar o mouse sobre os links das redes sociais */
+footer .social a:hover {
+    color: #3498db; /* Cor azul ao passar o mouse */
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+/* Estilos para os links da barra de navegação */
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1.2rem; /* Tamanho do texto */
+    color: #333; /* Cor dos links */
+}
+
+/* Efeito ao passar o mouse sobre os links da barra de navegação */
+nav ul li a:hover {
+    color: #3498db; /* Muda para azul ao passar o mouse */
+}
+
+/* Estilo para o corpo da página */
+.contribuicao {
+    padding: 20px;
+    background-color: #f4f4f4; /* Cor de fundo clara para contrastar */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para a imagem de contribuição */
+.imagem-contribuicao img {
+    width: 80%; /* Define a largura da imagem */
+    max-width: 600px; /* Limita o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: 20px; /* Espaço superior */
+}
